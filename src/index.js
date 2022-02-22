@@ -6,6 +6,7 @@ const creditStore = require("./social-credit-store")
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.DIRECT_MESSAGES, Intents.FLAGS.GUILD_MESSAGES] });
 const prefix = "!credits";
+ 
 
 client.once('ready', () => {
 	console.log(getTime() + colors.green('Bot is Ready.'));
@@ -56,4 +57,7 @@ function getTime() {
     return colors.gray(`[${dateTime.getHours()}:${dateTime.getMinutes()}:${dateTime.getSeconds()}] `);
 }
 
-client.login(token);
+if(token)
+    client.login(token);
+else
+    client.login(process.env.TOKEN);
