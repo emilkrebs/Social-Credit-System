@@ -1,5 +1,4 @@
 const { Client, Intents } = require('discord.js');
-const { token } = require('../config.json');
 const { regexes } = require('../credit-config.json');
 const colors = require('colors');
 const creditStore = require("./social-credit-store")
@@ -57,7 +56,4 @@ function getTime() {
     return colors.gray(`[${dateTime.getHours()}:${dateTime.getMinutes()}:${dateTime.getSeconds()}] `);
 }
 
-if(token)
-    client.login(token);
-else
-    client.login(process.env.TOKEN);
+client.login(process.env.TOKEN);
