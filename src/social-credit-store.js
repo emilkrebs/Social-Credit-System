@@ -9,9 +9,6 @@ exports.addCredits = async function (userid, amount) {
         await this.setCredits(userid, current + amount);
     else
         await this.setCredits(userid, amount);
-    
-    
-    console.log("SET: " +  userid);
 }
 
 exports.getCredits = async function (userid) {

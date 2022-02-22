@@ -20,6 +20,7 @@ client.on('messageCreate', async message => {
     if(content.startsWith(prefix)) {
         args = message.content.slice(prefix.length).trim().split(/\s+/);
 	    const command = args.shift().toLowerCase();
+
         if (command === 'get') {
             if (args.length) {
                 let userid = message.mentions.users.first().id;
@@ -27,25 +28,28 @@ client.on('messageCreate', async message => {
                     return message.channel.send(`User ${message.mentions.users.first().tag} was not found!`);
                 }
                 let credits = await creditStore.getCredits(userid);
+                
                 console.log(getTime() + colors.green(`${colors.yellow(args[0])} has ${colors.yellow(credits)} Social Credits!`));
+
                 return message.channel.send(`${message.mentions.users.first().tag} has ${credits} Social Credits!`);
             }
-    
             return message.channel.send(`Please provide any user.`);
         }
+
     }
     else {
         regexes.forEach(async element => {
-            let regex = new RegExp(element.pattern);
+            let regex = new RegExp(element.pattern, element.flags);
             if(regex.exec(content)) {
                 await creditStore.addCredits(message.author.id, element.points);
+
                 console.log(getTime() + colors.green(`${colors.yellow(message.author.tag)} got ${colors.yellow(element.points)} Social Credits!`));
+                
                 return;
             }
         });
     }
 });
-
 
 function getTime() {
     let dateTime = new Date()

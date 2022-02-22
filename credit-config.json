@@ -2,7 +2,33 @@
     "regexes":[
         {
             "pattern":"thanks|thank",
-            "points":"10"
+            "flags":"",
+            "points":10
+        },
+        {
+            "pattern":"fuck you",
+            "flags":"gmi",
+            "points":-50
+        },
+        {
+            "pattern":"i love super\\s?idol",
+            "flags":"gmi",
+            "points":9999999
+        },
+        {
+            "pattern":"i hate super\\s?idol",
+            "flags":"gmi",
+            "points":-9999999
+        },
+        {
+            "pattern":"taiwan is not a country",
+            "flags":"gmi",
+            "points":9999999
+        },
+        {
+            "pattern":"taiwan is a country",
+            "flags":"gmi",
+            "points":-9999999
         }
     ]
 }
