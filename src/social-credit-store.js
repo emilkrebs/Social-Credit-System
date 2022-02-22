@@ -6,9 +6,9 @@ keyv.on('error', err => console.error('Keyv connection error:', err));
 exports.addCredits = async function (userid, amount) {
     let current = await this.getCredits(userid);
     if(current)
-        await this.setCredits(userid, current + amount);
+        await this.setCredits(userid, parseInt(current + amount));
     else
-        await this.setCredits(userid, amount);
+        await this.setCredits(userid, parseInt(amount));
 }
 
 exports.getCredits = async function (userid) {
@@ -16,5 +16,5 @@ exports.getCredits = async function (userid) {
 }
 
 exports.setCredits = async function (userid, amount) {
-    await keyv.set(userid, amount);
+    await keyv.set(userid, parseInt(amount));
 }

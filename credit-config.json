@@ -3,32 +3,32 @@
         {
             "pattern":"thanks|thank",
             "flags":"",
-            "points":10
+            "points":1
         },
         {
             "pattern":"fuck you",
             "flags":"gmi",
-            "points":-50
+            "points":-2
         },
         {
             "pattern":"i love super\\s?idol",
             "flags":"gmi",
-            "points":9999999
+            "points":30
         },
         {
             "pattern":"i hate super\\s?idol",
             "flags":"gmi",
-            "points":-9999999
+            "points":-100
         },
         {
             "pattern":"taiwan is not a country",
             "flags":"gmi",
-            "points":9999999
+            "points":20
         },
         {
             "pattern":"taiwan is a country",
             "flags":"gmi",
-            "points":-9999999
+            "points":-100
         }
     ]
 }
