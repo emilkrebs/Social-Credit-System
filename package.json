@@ -1,0 +1,25 @@
+{
+  "name": "social-credit-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilkrebs/Social-Credit-System.git"
+  },
+  "author": "Emil Krebs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emilkrebs/Social-Credit-System/issues"
+  },
+  "homepage": "https://github.com/emilkrebs/Social-Credit-System#readme",
+  "dependencies": {
+    "@keyv/sqlite": "^3.0.0",
+    "colors": "^1.4.0",
+    "discord.js": "^13.6.0",
+    "keyv": "^4.1.1"
+  }
+}

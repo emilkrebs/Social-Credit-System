@@ -1,0 +1,8 @@
+{
+    "regexes":[
+        {
+            "pattern":"thanks|thank",
+            "points":"10"
+        }
+    ]
+}
