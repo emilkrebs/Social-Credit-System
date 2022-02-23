@@ -9,26 +9,6 @@
             "pattern":"fuck you",
             "flags":"gmi",
             "points":-2
-        },
-        {
-            "pattern":"i love super\\s?idol",
-            "flags":"gmi",
-            "points":30
-        },
-        {
-            "pattern":"i hate super\\s?idol",
-            "flags":"gmi",
-            "points":-100
-        },
-        {
-            "pattern":"taiwan is not a country",
-            "flags":"gmi",
-            "points":20
-        },
-        {
-            "pattern":"taiwan is a country",
-            "flags":"gmi",
-            "points":-100
         }
     ]
 }
